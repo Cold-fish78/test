@@ -22,7 +22,7 @@ module.exports.createUser = function (req, res) {
       console.log("error in creating user ...userContro11" + err);
     }
     if (!user) {
-      User.create({email : req.body.password ,password : hash , name : req.body.name}, function (err, user) {
+      User.create({email : req.body.email ,password : hash , name : req.body.name}, function (err, user) {
         console.log("creating user");
         if (err) { console.log("error in userContro16" + err); return }
         return res.redirect('/user/signIn');
