@@ -3,7 +3,7 @@ const app = express();
 const port = 8009;
 app.use(express.urlencoded({extended : true}));
 
-
+require("dotenv").config();
 // for ejs no
 app.set('view engine', 'ejs');
 app.set('views', './views');
