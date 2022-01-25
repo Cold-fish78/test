@@ -1,3 +1,3 @@
 module.exports.home = function(req,res){
-    return res.render('home',{title : "this is title of the page"});
+    return res.render('index',{title : "this is title of the page"});
 }
