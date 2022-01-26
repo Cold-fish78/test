@@ -1,6 +1,5 @@
 const User = require('../models/user');
-// let saltRounds = 10;
-// const bcrypt = require('bcrypt');
+
 module.exports.signIn = function (req, res) {
   return res.render('SignIn', { title: "user login" });
 }
@@ -12,8 +11,7 @@ module.exports.signUp = function (req, res) {
 
 
 module.exports.createUser = function (req, res) {
-  bcrypt.hash(req.body.password, saltRounds, function(err, hash) {
-    console.log("inside createUser module");
+ 
   if (req.body.password != req.body.confirmPassword) {
     return res.redirect('back');
   }
@@ -33,7 +31,7 @@ module.exports.createUser = function (req, res) {
     }
 
   });
-});
+
  
 }
 module.exports.getUser = function (req, res) {
