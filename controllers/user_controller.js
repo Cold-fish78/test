@@ -62,3 +62,6 @@ module.exports.getUser = function (req, res) {
 
 
 }
+module.exports.contactUs = function(req,res){
+  return res.render('contact',{title : "Contact us"});
+}

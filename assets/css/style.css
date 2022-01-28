@@ -3,6 +3,7 @@
   padding: 0; 
 }
 
+
 .navigation {
   margin-top: 25px;
   font-family: var(--font1);
@@ -37,6 +38,9 @@
 }
 
 .nav-left ul li a {
+  white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
   text-decoration: none;
   color: black;
 }
